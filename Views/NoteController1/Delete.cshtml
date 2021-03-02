@@ -1,0 +1,31 @@
+﻿@model WebowaAplikacja.Models.ClassWebApp
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Usuń notatkę</h1>
+
+<h3>Czy na pewno chcesz usunąc tą notatkę?</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Tresc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Tresc)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="submit" value="Usuń" class="btn btn-danger" /> |
+        <a asp-action="Index">Wróć do listy </a>
+    </form>
+</div>
